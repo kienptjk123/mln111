@@ -92,68 +92,47 @@ interface PaintingData {
 }
 
 const paintingDescriptions: Record<string, PaintingData> = {
-  "abstract-art-1": {
-    title: "Abstract Art 1",
-    imageUrl: "/abstract-art.png",
+  BoiCanh1_Anh1: {
+    title: "Thế giới của những điều hiển nhiên",
+    imageUrl: "/BoiCanh1_Anh1.png",
     description:
-      "A vibrant abstract composition exploring the interplay of colors and forms, representing the chaos and beauty of modern life.",
-    audioKey: "abstract-art-1",
+      "Một bức tranh lớn tái hiện khoảnh khắc kinh điển: Isaac Newton ngồi dưới tán cây táo. Một quả táo đang rơi, hoặc vừa chạm đất ngay trước mặt ông. Xung quanh là những chiếc lá rơi, một cuốn sách nhỏ lăn nghiêng trên thảm cỏ – những chi tiết bình dị, đời thường. Bất kỳ ai cũng có thể thấy quả táo rơi. Nếu quả táo trúng đầu, ta cảm nhận được sự đau rát. Nếu quan sát hàng ngày, ta biết mọi vật khi rơi đều hướng xuống đất. Đây là lớp nhận thức đầu tiên – nhận thức cảm tính – chỉ dừng lại ở hiện tượng trực tiếp, ở những gì giác quan đem lại.",
+    audioKey: "BoiCanh1_Anh1",
   },
-  "portrait-1": {
-    title: "Portrait 1",
-    imageUrl: "/portrait-painting.png",
+  BoiCanh1_Anh2: {
+    title: "Câu hỏi về Bản chất",
+    imageUrl: "/BoiCanh1_Anh2.png",
     description:
-      "An intimate portrait capturing the essence of human emotion through masterful brushwork and subtle lighting.",
-    audioKey: "portrait-1",
+      "Newton ngồi trầm tư, đôi mắt ánh lên sự tò mò. Xung quanh ông, trong không gian mờ ảo, lơ lửng những công thức toán học, sơ đồ quỹ đạo hành tinh, hình ảnh Mặt Trăng tròn sáng, và các ký hiệu tượng trưng cho lực hút vô hình. Newton khẽ đưa tay chỉ vào một công thức, như thể ông vừa nắm bắt được mạch nguồn của vũ trụ.  Từ việc nhìn quả táo rơi, Newton không dừng lại ở sự “thấy”. Ông đặt câu hỏi: “Tại sao quả táo lại rơi? Có một lực nào đó kéo nó xuống chăng?”Ông liên hệ hiện tượng nhỏ bé này với chuyển động khổng lồ của Mặt Trăng quanh Trái Đất. Từ đó, qua phân tích và khái quát hóa, Newton xây dựng nên khái niệm “lực hấp dẫn” và định luật vạn vật hấp dẫn – một bước nhảy vọt của nhận thức lý tính.",
+    audioKey: "BoiCanh1_Anh2",
   },
-  "landscape-1": {
-    title: "Landscape 1",
-    imageUrl: "/beautiful-landscape-painting.jpg",
+  BoiCanh1_Anh3: {
+    title: "Ánh sáng của Chân lý",
+    imageUrl: "/BoiCanh1_Anh3.png",
     description:
-      "A serene landscape painting depicting the tranquil beauty of nature with rolling hills and golden sunlight.",
-    audioKey: "landscape-1",
+      "Không gian mở ra thành một bức tranh khổng lồ hoặc một mô hình chuyển động. Trước mắt người xem là toàn bộ hệ Mặt Trời: các hành tinh xoay quanh Mặt Trời theo những quỹ đạo chính xác, sáng lấp lánh. Xen lẫn là hình ảnh vệ tinh nhân tạo bay quanh Trái Đất, minh chứng con người đã ứng dụng quy luật ấy để chinh phục vũ trụ. Định luật vạn vật hấp dẫn không chỉ dừng lại ở trang giấy. Nó đã được kiểm chứng qua hàng ngàn quan sát thiên văn và thí nghiệm thực tế. Từ đó, con người dự đoán chính xác chuyển động thiên thể, phóng tàu vũ trụ, đặt vệ tinh, và mở rộng tầm nhìn về vũ trụ bao la.👉 Đây chính là thực tiễn kiểm nghiệm và chứng minh chân lý – nền tảng cho những thành tựu vĩ đại của khoa học và công nghệ hiện đại.",
+    audioKey: "BoiCanh1_Anh3",
   },
-  "modern-art": {
-    title: "Modern Art",
-    imageUrl: "/modern-abstract-art.png",
+  BoiCanh2_Anh1: {
+    title: "Nỗi sợ và Cái chết",
+    imageUrl: "/BoiCanh2_Anh1.png",
     description:
-      "A contemporary piece that challenges traditional artistic boundaries with bold geometric shapes and striking color contrasts.",
-    audioKey: "modern-art",
+      "Một căn phòng tối, ánh sáng mờ ảo chỉ chiếu vào một bức tranh lớn vẽ một thành phố cổ kính trong cơn hoảng loạn. Người dân che mặt, chạy trốn. Các xác người nằm la liệt. Có thể có một đoạn âm thanh tiếng chuông tang lễ và tiếng ho sặc sụa. Bên cạnh là những câu trích dẫn: Dịch bệnh này là sự trừng phạt của thần linh!, Nó lây lan qua không khí độc!, Hãy đốt những người bệnh để diệt trừ ma quỷ! Đây là nhận thức cảm tính của con người trước một hiện tượng không thể giải thích. Họ nhìn thấy (thị giác) cái chết, nghe thấy (thính giác) tiếng rên la, và cảm nhận (cảm xúc) nỗi sợ hãi tột cùng. Những gì họ thấy và cảm nhận là những sự kiện rời rạc, bên ngoài, không đi sâu vào bản chất. Họ tin vào những lời đồn thổi, vào những giải thích thiếu căn cứ vì đó là những gì họ cảm thấy hợp lý nhất trong tình thế hoảng loạn.",
+    audioKey: "BoiCanh2_Anh1",
   },
-  "classical-portrait": {
-    title: "Classical Portrait",
-    imageUrl: "/classical-portrait.jpg",
+  BoiCanh2_Anh2: {
+    title: "Ánh sáng của Khoa học",
+    imageUrl: "/BoiCanh2_Anh2.png",
     description:
-      "A timeless portrait in the classical tradition, showcasing refined technique and dignified subject matter.",
-    audioKey: "classical-portrait",
+      "Một không gian sáng sủa hơn. Trưng bày các bản vẽ sơ đồ của vi khuẩn, virus, của hệ tuần hoàn máu và các tế bào miễn dịch. Các bảng biểu so sánh giữa các ca nhiễm, các nguyên nhân gây bệnh. Có thể có một mô hình 3D về cấu trúc virus. Một câu trích dẫn nổi bật: Bệnh tật không phải sự trừng phạt, nó là một phản ứng sinh học của cơ thể trước tác nhân bên ngoài. Từ những quan sát và nỗi sợ hãi ban đầu, các nhà khoa học bắt đầu tư duy, phân tích, và tìm ra bản chất của vấn đề. Họ sử dụng kính hiển vi để khám phá ra thế giới vi sinh vật (vi khuẩn, virus), xây dựng các khái niệm như mầm bệnh, lây truyền, vắc_xin. Họ hiểu được cơ chế hoạt động của bệnh dịch và tìm ra cách để phòng ngừa, chữa trị. Quá trình này hoàn toàn dựa vào tư duy trừu tượng và logic, vượt qua những cảm nhận và nỗi sợ ban đầu.",
+    audioKey: "BoiCanh2_Anh2",
   },
-  "mountain-landscape": {
-    title: "Mountain Landscape",
-    imageUrl: "/mountain-landscape-painting.png",
+  BoiCanh2_Anh3: {
+    title: "Chiến thắng Bệnh tật",
+    imageUrl: "/BoiCanh2_Anh3.png",
     description:
-      "Majestic mountain peaks rise against a dramatic sky, capturing the raw power and beauty of untamed wilderness.",
-    audioKey: "mountain-landscape",
-  },
-  "circular-art-1": {
-    title: "Circular Art 1",
-    imageUrl: "/abstract-art.png",
-    description:
-      "A circular composition that draws the viewer's eye inward, exploring themes of unity and infinite possibility.",
-    audioKey: "circular-art-1",
-  },
-  masterpiece: {
-    title: "Masterpiece",
-    imageUrl: "/masterpiece-painting-gallery-centerpiece.jpg",
-    description:
-      "The crown jewel of our collection - a masterwork that represents the pinnacle of artistic achievement and cultural significance.",
-    audioKey: "masterpiece",
-  },
-  "circular-art-2": {
-    title: "Circular Art 2",
-    imageUrl: "/portrait-painting.png",
-    description:
-      "An innovative circular portrait that breaks conventional framing, creating an intimate and focused viewing experience.",
-    audioKey: "circular-art-2",
+      "Một khu vực trưng bày thành tựu. Có hình ảnh một phòng phẫu thuật sạch sẽ, hình ảnh một ống tiêm vắc_xin đang được tiêm vào tay em bé, hình ảnh một bệnh viện hiện đại đang chữa trị cho bệnh nhân, và hình ảnh các chiến dịch tiêm chủng rộng khắp. Bên cạnh là những câu trích dẫn: Nhờ khoa học, chúng ta đã đẩy lùi được bệnh đậu mùa. hoặc Sự sống đã được cứu. Toàn bộ kiến thức lý tính về bệnh tật đã được kiểm nghiệm và áp dụng vào thực tiễn. Việc sản xuất vắc_xin và chữa trị thành công các căn bệnh đã từng là nỗi khiếp sợ là bằng chứng rõ ràng nhất cho thấy nhận thức của con người là đúng đắn. Chính nhờ thực tiễn này, những nỗi sợ hãi vô căn cứ đã dần được xóa bỏ, và nhân loại đã tiến lên",
+    audioKey: "BoiCanh2_Anh3",
   },
 };
 
@@ -208,14 +187,14 @@ export default function Gallery({
 
   return (
     <group ref={galleryRef}>
-      {/* Extended Room - 24x18 instead of 16x12 */}
+      {/* Extended Room - 24x18 */}
       <mesh
         rotation={[-Math.PI / 2, 0, 0]}
         position={[0, 0, 0]}
         receiveShadow
         castShadow
       >
-        <planeGeometry args={[24, 12]} />
+        <planeGeometry args={[24, 18]} />
         <meshStandardMaterial color="#404040" roughness={0.1} metalness={0.1} />
       </mesh>
 
@@ -271,7 +250,7 @@ export default function Gallery({
           roughness={0.1}
           metalness={0.05}
           emissive="#f8f8ff"
-          emissiveIntensity={0.1}
+          emissiveIntensity={0.3}
         />
       </mesh>
 
@@ -290,7 +269,7 @@ export default function Gallery({
       {/* Enhanced Lighting for larger room */}
       <directionalLight
         position={[5, 10, 5]}
-        intensity={1.2}
+        intensity={1.8}
         color="#ffffff"
         castShadow
         shadow-mapSize={[4096, 4096]}
@@ -304,108 +283,110 @@ export default function Gallery({
 
       <directionalLight
         position={[-3, 8, -3]}
-        intensity={0.6}
+        intensity={1.0}
         color="#f8f8ff"
         castShadow={false}
       />
 
       <pointLight
         position={[-8, 4.8, -2]}
-        intensity={2}
+        intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
         position={[8, 4.8, -2]}
-        intensity={2}
+        intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
         position={[-8, 4.8, 2]}
-        intensity={2}
+        intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
         position={[8, 4.8, 2]}
-        intensity={2}
+        intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
         position={[0, 4.8, 0]}
-        intensity={2.5}
+        intensity={3.5}
         color="#ffffff"
         distance={10}
         decay={0.5}
       />
 
-      <ambientLight intensity={0.4} color="#f8f8ff" />
+      <ambientLight intensity={0.7} color="#f8f8ff" />
 
       {/* Left wall paintings - moved to -11.8 */}
       <OrnateFrame
         position={[-11.8, 2.5, -5]}
         rotation={[0, Math.PI / 2, 0]}
-        title="Abstract Art 1"
-        imageUrl="/abstract-art.png"
+        title={paintingDescriptions["BoiCanh1_Anh1"].title}
+        imageUrl={paintingDescriptions["BoiCanh1_Anh1"].imageUrl}
         size={[1.8, 1.4]}
-        paintingData={paintingDescriptions["abstract-art-1"]}
+        paintingData={paintingDescriptions["BoiCanh1_Anh1"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[-11.8, 2.5, -5]}
-        paintingKey="abstract-art-1"
-        paintingData={paintingDescriptions["abstract-art-1"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh1_Anh1"
+        paintingData={paintingDescriptions["BoiCanh1_Anh1"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
         isCurrentlyPlaying={
-          currentKey === "abstract-art-1" && audioState.isPlaying
+          currentKey === "BoiCanh1_Anh1" && audioState.isPlaying
         }
       />
 
       <OrnateFrame
         position={[-11.8, 2.5, 0]}
         rotation={[0, Math.PI / 2, 0]}
-        title="Portrait 1"
-        imageUrl="/portrait-painting.png"
+        title={paintingDescriptions["BoiCanh1_Anh2"].title}
+        imageUrl={paintingDescriptions["BoiCanh1_Anh2"].imageUrl}
         size={[1.6, 2]}
-        paintingData={paintingDescriptions["portrait-1"]}
+        paintingData={paintingDescriptions["BoiCanh1_Anh2"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[-11.8, 2.5, 0]}
-        paintingKey="portrait-1"
-        paintingData={paintingDescriptions["portrait-1"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh1_Anh2"
+        paintingData={paintingDescriptions["BoiCanh1_Anh2"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
-        isCurrentlyPlaying={currentKey === "portrait-1" && audioState.isPlaying}
+        isCurrentlyPlaying={
+          currentKey === "BoiCanh1_Anh2" && audioState.isPlaying
+        }
       />
 
       <OrnateFrame
         position={[-11.8, 2.5, 5]}
         rotation={[0, Math.PI / 2, 0]}
-        title="Landscape 1"
-        imageUrl="/beautiful-landscape-painting.jpg"
+        title={paintingDescriptions["BoiCanh1_Anh3"].title}
+        imageUrl={paintingDescriptions["BoiCanh1_Anh3"].imageUrl}
         size={[2.2, 1.6]}
-        paintingData={paintingDescriptions["landscape-1"]}
+        paintingData={paintingDescriptions["BoiCanh1_Anh3"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[-11.8, 2.5, 5]}
-        paintingKey="landscape-1"
-        paintingData={paintingDescriptions["landscape-1"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh1_Anh3"
+        paintingData={paintingDescriptions["BoiCanh1_Anh3"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
         isCurrentlyPlaying={
-          currentKey === "landscape-1" && audioState.isPlaying
+          currentKey === "BoiCanh1_Anh3" && audioState.isPlaying
         }
       />
 
@@ -413,83 +394,63 @@ export default function Gallery({
       <OrnateFrame
         position={[11.8, 2.5, -5]}
         rotation={[0, -Math.PI / 2, 0]}
-        title="Modern Art"
-        imageUrl="/modern-abstract-art.png"
+        title={paintingDescriptions["BoiCanh2_Anh1"].title}
+        imageUrl={paintingDescriptions["BoiCanh2_Anh1"].imageUrl}
         size={[1.8, 1.8]}
-        paintingData={paintingDescriptions["modern-art"]}
+        paintingData={paintingDescriptions["BoiCanh2_Anh1"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[11.8, 2.5, -5]}
-        paintingKey="modern-art"
-        paintingData={paintingDescriptions["modern-art"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh2_Anh1"
+        paintingData={paintingDescriptions["BoiCanh2_Anh1"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
-        isCurrentlyPlaying={currentKey === "modern-art" && audioState.isPlaying}
+        isCurrentlyPlaying={
+          currentKey === "BoiCanh2_Anh1" && audioState.isPlaying
+        }
       />
 
       <OrnateFrame
         position={[11.8, 2.5, 0]}
         rotation={[0, -Math.PI / 2, 0]}
-        title="Classical Portrait"
-        imageUrl="/classical-portrait.jpg"
+        title={paintingDescriptions["BoiCanh2_Anh2"].title}
+        imageUrl={paintingDescriptions["BoiCanh2_Anh2"].imageUrl}
         size={[1.6, 2]}
-        paintingData={paintingDescriptions["classical-portrait"]}
+        paintingData={paintingDescriptions["BoiCanh2_Anh2"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[11.8, 2.5, 0]}
-        paintingKey="classical-portrait"
-        paintingData={paintingDescriptions["classical-portrait"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh2_Anh2"
+        paintingData={paintingDescriptions["BoiCanh2_Anh2"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
         isCurrentlyPlaying={
-          currentKey === "classical-portrait" && audioState.isPlaying
+          currentKey === "BoiCanh2_Anh2" && audioState.isPlaying
         }
       />
 
       <OrnateFrame
         position={[11.8, 2.5, 5]}
         rotation={[0, -Math.PI / 2, 0]}
-        title="Mountain Landscape"
-        imageUrl="/mountain-landscape-painting.png"
+        title={paintingDescriptions["BoiCanh2_Anh3"].title}
+        imageUrl={paintingDescriptions["BoiCanh2_Anh3"].imageUrl}
         size={[2.2, 1.6]}
-        paintingData={paintingDescriptions["mountain-landscape"]}
+        paintingData={paintingDescriptions["BoiCanh2_Anh3"]}
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
         position={[11.8, 2.5, 5]}
-        paintingKey="mountain-landscape"
-        paintingData={paintingDescriptions["mountain-landscape"]}
-        triggerDistance={7.5}
+        paintingKey="BoiCanh2_Anh3"
+        paintingData={paintingDescriptions["BoiCanh2_Anh3"]}
+        triggerDistance={5}
         onProximityEnter={handleProximityEnter}
         onProximityExit={handleProximityExit}
         isCurrentlyPlaying={
-          currentKey === "mountain-landscape" && audioState.isPlaying
-        }
-      />
-
-      {/* Main masterpiece - moved to back wall at -8.9 */}
-      <OrnateFrame
-        position={[0, 2.5, -8.9]}
-        rotation={[0, 0, 0]}
-        title="Masterpiece"
-        imageUrl="/masterpiece-painting-gallery-centerpiece.jpg"
-        size={[2.5, 2]}
-        paintingData={paintingDescriptions["masterpiece"]}
-        onPaintingClick={onPaintingClick}
-      />
-      <ProximityAudioTrigger
-        position={[0, 2.5, -8.9]}
-        paintingKey="masterpiece"
-        paintingData={paintingDescriptions["masterpiece"]}
-        triggerDistance={9.0}
-        onProximityEnter={handleProximityEnter}
-        onProximityExit={handleProximityExit}
-        isCurrentlyPlaying={
-          currentKey === "masterpiece" && audioState.isPlaying
+          currentKey === "BoiCanh2_Anh3" && audioState.isPlaying
         }
       />
     </group>
