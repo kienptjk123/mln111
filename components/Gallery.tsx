@@ -1,9 +1,8 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-import type { Mesh, SpotLight } from "three";
+import { useRef } from "react";
+import type { Mesh } from "three";
 import { useTexture, Text } from "@react-three/drei";
-import * as THREE from "three";
 import ProximityAudioTrigger from "./ProximityAudioTrigger";
 import { useVoicePlayer } from "@/hooks/useVoicePlayer";
 
@@ -91,7 +90,7 @@ interface PaintingData {
   audioKey: string;
 }
 
-const paintingDescriptions: Record<string, PaintingData> = {
+export const paintingDescriptions: Record<string, PaintingData> = {
   BoiCanh1_Anh1: {
     title: "Thế giới của những điều hiển nhiên",
     imageUrl: "/BoiCanh1_Anh1.png",
@@ -200,7 +199,7 @@ export default function Gallery({
 
       {/* Left wall */}
       <mesh
-        position={[-12, 3.5, 0]}
+        position={[-8, 3.5, 0]}
         rotation={[0, Math.PI / 2, 0]}
         receiveShadow
         castShadow
@@ -211,7 +210,7 @@ export default function Gallery({
 
       {/* Right wall */}
       <mesh
-        position={[12, 3.5, 0]}
+        position={[8, 3.5, 0]}
         rotation={[0, -Math.PI / 2, 0]}
         receiveShadow
         castShadow
@@ -289,28 +288,28 @@ export default function Gallery({
       />
 
       <pointLight
-        position={[-8, 4.8, -2]}
+        position={[-6, 4.8, -2]}
         intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
-        position={[8, 4.8, -2]}
+        position={[6, 4.8, -2]}
         intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
-        position={[-8, 4.8, 2]}
+        position={[-6, 4.8, 2]}
         intensity={3}
         color="#ffffff"
         distance={8}
         decay={0.5}
       />
       <pointLight
-        position={[8, 4.8, 2]}
+        position={[6, 4.8, 2]}
         intensity={3}
         color="#ffffff"
         distance={8}
@@ -326,9 +325,9 @@ export default function Gallery({
 
       <ambientLight intensity={0.7} color="#f8f8ff" />
 
-      {/* Left wall paintings - moved to -11.8 */}
+      {/* Left wall paintings - moved to -8 */}
       <OrnateFrame
-        position={[-11.8, 2.5, -5]}
+        position={[-8, 2.5, -5]}
         rotation={[0, Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh1_Anh1"].title}
         imageUrl={paintingDescriptions["BoiCanh1_Anh1"].imageUrl}
@@ -337,7 +336,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[-11.8, 2.5, -5]}
+        position={[-8, 2.5, -5]}
         paintingKey="BoiCanh1_Anh1"
         paintingData={paintingDescriptions["BoiCanh1_Anh1"]}
         triggerDistance={5}
@@ -349,7 +348,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[-11.8, 2.5, 0]}
+        position={[-8, 2.5, 0]}
         rotation={[0, Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh1_Anh2"].title}
         imageUrl={paintingDescriptions["BoiCanh1_Anh2"].imageUrl}
@@ -358,7 +357,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[-11.8, 2.5, 0]}
+        position={[-8, 2.5, 0]}
         paintingKey="BoiCanh1_Anh2"
         paintingData={paintingDescriptions["BoiCanh1_Anh2"]}
         triggerDistance={5}
@@ -370,7 +369,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[-11.8, 2.5, 5]}
+        position={[-8, 2.5, 5]}
         rotation={[0, Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh1_Anh3"].title}
         imageUrl={paintingDescriptions["BoiCanh1_Anh3"].imageUrl}
@@ -379,7 +378,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[-11.8, 2.5, 5]}
+        position={[-8, 2.5, 5]}
         paintingKey="BoiCanh1_Anh3"
         paintingData={paintingDescriptions["BoiCanh1_Anh3"]}
         triggerDistance={5}
@@ -390,9 +389,9 @@ export default function Gallery({
         }
       />
 
-      {/* Right wall paintings - moved to 11.8 */}
+      {/* Right wall paintings - moved to 8 */}
       <OrnateFrame
-        position={[11.8, 2.5, -5]}
+        position={[8, 2.5, -5]}
         rotation={[0, -Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh2_Anh1"].title}
         imageUrl={paintingDescriptions["BoiCanh2_Anh1"].imageUrl}
@@ -401,7 +400,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[11.8, 2.5, -5]}
+        position={[8, 2.5, -5]}
         paintingKey="BoiCanh2_Anh1"
         paintingData={paintingDescriptions["BoiCanh2_Anh1"]}
         triggerDistance={5}
@@ -413,7 +412,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[11.8, 2.5, 0]}
+        position={[8, 2.5, 0]}
         rotation={[0, -Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh2_Anh2"].title}
         imageUrl={paintingDescriptions["BoiCanh2_Anh2"].imageUrl}
@@ -422,7 +421,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[11.8, 2.5, 0]}
+        position={[8, 2.5, 0]}
         paintingKey="BoiCanh2_Anh2"
         paintingData={paintingDescriptions["BoiCanh2_Anh2"]}
         triggerDistance={5}
@@ -434,7 +433,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[11.8, 2.5, 5]}
+        position={[8, 2.5, 5]}
         rotation={[0, -Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh2_Anh3"].title}
         imageUrl={paintingDescriptions["BoiCanh2_Anh3"].imageUrl}
@@ -443,7 +442,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[11.8, 2.5, 5]}
+        position={[8, 2.5, 5]}
         paintingKey="BoiCanh2_Anh3"
         paintingData={paintingDescriptions["BoiCanh2_Anh3"]}
         triggerDistance={5}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import useVoiceCaption from "../hooks/useVoiceCaption";
 
 export interface CaptionSegment {
   text: string;
@@ -11,40 +12,131 @@ export interface CaptionSegment {
 interface LiveCaptionProps {
   currentTime: number;
   isPlaying: boolean;
-  captions: CaptionSegment[];
+  audioId?: string;
+  description?: string;
+  duration?: number;
+  // Legacy support for direct captions
+  captions?: CaptionSegment[];
   className?: string;
 }
 
 export default function LiveCaption({
   currentTime,
   isPlaying,
-  captions,
+  audioId,
+  description,
+  duration,
+  captions: legacyCaptions,
   className = "",
 }: LiveCaptionProps) {
+  const [captionState, captionControls] = useVoiceCaption();
   const [currentCaption, setCurrentCaption] = useState<string>("");
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
+  // Load captions when audioId, description, or duration changes
   useEffect(() => {
-    if (!isPlaying || captions.length === 0) {
+    if (audioId && description && duration) {
+      captionControls.loadCaptions(audioId, description, duration);
+    } else if (!audioId) {
+      captionControls.clearCaptions();
+    }
+  }, [audioId, description, duration]); // Remove captionControls from dependencies
+
+  useEffect(() => {
+    if (!isPlaying) {
       setCurrentCaption("");
       setIsVisible(false);
       return;
     }
 
-    // Find the caption that should be displayed at current time
-    const activeCaption = captions.find(
-      (caption) =>
-        currentTime >= caption.startTime && currentTime <= caption.endTime
-    );
+    let activeCaption = "";
 
-    if (activeCaption) {
-      setCurrentCaption(activeCaption.text);
-      setIsVisible(true);
-    } else {
-      setCurrentCaption("");
-      setIsVisible(false);
+    // Use new voice caption system if available
+    if (captionState.captions.length > 0) {
+      activeCaption = captionControls.getCurrentCaption(currentTime);
     }
-  }, [currentTime, isPlaying, captions]);
+    // Fallback to legacy captions prop
+    else if (legacyCaptions && legacyCaptions.length > 0) {
+      const legacyCaption = legacyCaptions.find(
+        (caption) =>
+          currentTime >= caption.startTime && currentTime <= caption.endTime
+      );
+      activeCaption = legacyCaption?.text || "";
+    }
+
+    setCurrentCaption(activeCaption);
+    setIsVisible(!!activeCaption);
+  }, [
+    currentTime,
+    isPlaying,
+    captionState.captions,
+    legacyCaptions,
+    // Remove captionControls from dependencies to prevent infinite re-renders
+  ]);
+
+  // Show loading state
+  if (captionState.isLoading) {
+    return (
+      <div
+        className={`
+          fixed bottom-4 left-4 z-50
+          transition-all duration-300 ease-in-out
+          opacity-100 translate-y-0
+          ${className}
+        `}
+      >
+        <div
+          className="
+          bg-black bg-opacity-80 
+          text-white 
+          px-4 py-3 
+          rounded-lg 
+          shadow-lg 
+          border border-gray-600
+          backdrop-blur-sm
+          max-w-sm
+          min-w-64
+        "
+        >
+          <p className="text-sm leading-relaxed text-left text-gray-300">
+            Đang tải phụ đề...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (captionState.error && !currentCaption) {
+    return (
+      <div
+        className={`
+          fixed bottom-4 left-4 z-50
+          transition-all duration-300 ease-in-out
+          opacity-100 translate-y-0
+          ${className}
+        `}
+      >
+        <div
+          className="
+          bg-red-900 bg-opacity-80 
+          text-white 
+          px-4 py-3 
+          rounded-lg 
+          shadow-lg 
+          border border-red-600
+          backdrop-blur-sm
+          max-w-sm
+          min-w-64
+        "
+        >
+          <p className="text-sm leading-relaxed text-left">
+            {captionState.error}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   if (!currentCaption) {
     return null;
@@ -73,6 +165,11 @@ export default function LiveCaption({
       "
       >
         <p className="text-sm leading-relaxed text-left">{currentCaption}</p>
+        {captionState.error && (
+          <p className="text-xs text-yellow-300 mt-1">
+            (Sử dụng phụ đề dự phòng)
+          </p>
+        )}
       </div>
     </div>
   );
@@ -100,126 +197,3 @@ export function generateCaptionsFromDescription(
     endTime: (index + 1) * timePerSentence,
   }));
 }
-
-// Sample captions data for each painting
-export const paintingCaptions: Record<string, CaptionSegment[]> = {
-  "abstract-art-1": [
-    {
-      text: "Một tác phẩm trừu tượng đầy màu sắc",
-      startTime: 0,
-      endTime: 3,
-    },
-    {
-      text: "khám phá sự tương tác giữa màu sắc và hình khối",
-      startTime: 3,
-      endTime: 7,
-    },
-    {
-      text: "thể hiện sự hỗn loạn và vẻ đẹp của cuộc sống hiện đại.",
-      startTime: 7,
-      endTime: 12,
-    },
-  ],
-  "portrait-1": [
-    {
-      text: "Một chân dung thân mật",
-      startTime: 0,
-      endTime: 2.5,
-    },
-    {
-      text: "nắm bắt được bản chất của cảm xúc con người",
-      startTime: 2.5,
-      endTime: 6,
-    },
-    {
-      text: "thông qua nét vẽ tinh tế và ánh sáng khéo léo.",
-      startTime: 6,
-      endTime: 10,
-    },
-  ],
-  "landscape-1": [
-    {
-      text: "Một bức tranh phong cảnh thanh bình",
-      startTime: 0,
-      endTime: 3,
-    },
-    {
-      text: "mô tả vẻ đẹp yên tĩnh của thiên nhiên",
-      startTime: 3,
-      endTime: 6.5,
-    },
-    {
-      text: "với những ngọn đồi thoai thoải và ánh nắng vàng.",
-      startTime: 6.5,
-      endTime: 11,
-    },
-  ],
-  "modern-art": [
-    {
-      text: "Một tác phẩm đương đại",
-      startTime: 0,
-      endTime: 2,
-    },
-    {
-      text: "thách thức những ranh giới nghệ thuật truyền thống",
-      startTime: 2,
-      endTime: 6,
-    },
-    {
-      text: "với những hình khối hình học táo bạo và màu sắc tương phản mạnh mẽ.",
-      startTime: 6,
-      endTime: 12,
-    },
-  ],
-  "classical-portrait": [
-    {
-      text: "Một chân dung vượt thời gian",
-      startTime: 0,
-      endTime: 2.5,
-    },
-    {
-      text: "theo truyền thống cổ điển",
-      startTime: 2.5,
-      endTime: 4.5,
-    },
-    {
-      text: "thể hiện kỹ thuật tinh tế và chủ đề trang nghiêm.",
-      startTime: 4.5,
-      endTime: 9,
-    },
-  ],
-  "mountain-landscape": [
-    {
-      text: "Những đỉnh núi hùng vĩ",
-      startTime: 0,
-      endTime: 2.5,
-    },
-    {
-      text: "vươn lên trên bầu trời kịch tính",
-      startTime: 2.5,
-      endTime: 5,
-    },
-    {
-      text: "nắm bắt sức mạnh nguyên sơ và vẻ đẹp của thiên nhiên hoang dã.",
-      startTime: 5,
-      endTime: 11,
-    },
-  ],
-  masterpiece: [
-    {
-      text: "Báu vật của bộ sưu tập chúng tôi",
-      startTime: 0,
-      endTime: 3,
-    },
-    {
-      text: "một kiệt tác",
-      startTime: 3,
-      endTime: 4.5,
-    },
-    {
-      text: "đại diện cho đỉnh cao của thành tựu nghệ thuật và ý nghĩa văn hóa.",
-      startTime: 4.5,
-      endTime: 10,
-    },
-  ],
-};
