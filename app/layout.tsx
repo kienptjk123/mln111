@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Triễn lãm 3D",
+  title: "Triễn lãm tranh 3D - Lý luận nhận thức",
   description: "Triễn lãm 3D về nhận thức",
   generator: "v0.app",
 };

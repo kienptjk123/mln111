@@ -133,6 +133,12 @@ export const paintingDescriptions: Record<string, PaintingData> = {
       "Một khu vực trưng bày thành tựu. Có hình ảnh một phòng phẫu thuật sạch sẽ, hình ảnh một ống tiêm vắc_xin đang được tiêm vào tay em bé, hình ảnh một bệnh viện hiện đại đang chữa trị cho bệnh nhân, và hình ảnh các chiến dịch tiêm chủng rộng khắp. Bên cạnh là những câu trích dẫn: Nhờ khoa học, chúng ta đã đẩy lùi được bệnh đậu mùa. hoặc Sự sống đã được cứu. Toàn bộ kiến thức lý tính về bệnh tật đã được kiểm nghiệm và áp dụng vào thực tiễn. Việc sản xuất vắc_xin và chữa trị thành công các căn bệnh đã từng là nỗi khiếp sợ là bằng chứng rõ ràng nhất cho thấy nhận thức của con người là đúng đắn. Chính nhờ thực tiễn này, những nỗi sợ hãi vô căn cứ đã dần được xóa bỏ, và nhân loại đã tiến lên",
     audioKey: "BoiCanh2_Anh3",
   },
+  Center_Anh: {
+    title: "Chủ nghĩa Marx–Lenin",
+    imageUrl: "/Center_Anh.png",
+    description: "Chủ nghĩa Marx–Lenin",
+    audioKey: "Center_Anh",
+  },
 };
 
 export default function Gallery({
@@ -451,6 +457,15 @@ export default function Gallery({
         isCurrentlyPlaying={
           currentKey === "BoiCanh2_Anh3" && audioState.isPlaying
         }
+      />
+      <OrnateFrame
+        position={[0, 2.5, -8]}
+        rotation={[0, 0, 0]}
+        title={paintingDescriptions["Center_Anh"].title}
+        imageUrl={paintingDescriptions["Center_Anh"].imageUrl}
+        size={[5, 3]}
+        paintingData={paintingDescriptions["Center_Anh"]}
+        onPaintingClick={onPaintingClick}
       />
     </group>
   );
