@@ -333,7 +333,7 @@ export default function Gallery({
 
       {/* Left wall paintings - moved to -8 */}
       <OrnateFrame
-        position={[-8, 2.5, -5]}
+        position={[-8, 2.5, 5]}
         rotation={[0, Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh1_Anh1"].title}
         imageUrl={paintingDescriptions["BoiCanh1_Anh1"].imageUrl}
@@ -342,7 +342,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[-8, 2.5, -5]}
+        position={[-8, 2.5, 5]}
         paintingKey="BoiCanh1_Anh1"
         paintingData={paintingDescriptions["BoiCanh1_Anh1"]}
         triggerDistance={5}
@@ -375,7 +375,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[-8, 2.5, 5]}
+        position={[-8, 2.5, -5]}
         rotation={[0, Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh1_Anh3"].title}
         imageUrl={paintingDescriptions["BoiCanh1_Anh3"].imageUrl}
@@ -384,7 +384,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[-8, 2.5, 5]}
+        position={[-8, 2.5, -5]}
         paintingKey="BoiCanh1_Anh3"
         paintingData={paintingDescriptions["BoiCanh1_Anh3"]}
         triggerDistance={5}
@@ -397,7 +397,7 @@ export default function Gallery({
 
       {/* Right wall paintings - moved to 8 */}
       <OrnateFrame
-        position={[8, 2.5, -5]}
+        position={[8, 2.5, 5]}
         rotation={[0, -Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh2_Anh1"].title}
         imageUrl={paintingDescriptions["BoiCanh2_Anh1"].imageUrl}
@@ -406,7 +406,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[8, 2.5, -5]}
+        position={[8, 2.5, 5]}
         paintingKey="BoiCanh2_Anh1"
         paintingData={paintingDescriptions["BoiCanh2_Anh1"]}
         triggerDistance={5}
@@ -439,7 +439,7 @@ export default function Gallery({
       />
 
       <OrnateFrame
-        position={[8, 2.5, 5]}
+        position={[8, 2.5, -5]}
         rotation={[0, -Math.PI / 2, 0]}
         title={paintingDescriptions["BoiCanh2_Anh3"].title}
         imageUrl={paintingDescriptions["BoiCanh2_Anh3"].imageUrl}
@@ -448,7 +448,7 @@ export default function Gallery({
         onPaintingClick={onPaintingClick}
       />
       <ProximityAudioTrigger
-        position={[8, 2.5, 5]}
+        position={[8, 2.5, -5]}
         paintingKey="BoiCanh2_Anh3"
         paintingData={paintingDescriptions["BoiCanh2_Anh3"]}
         triggerDistance={5}
